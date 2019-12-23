@@ -1,0 +1,205 @@
+
+<!-- saved from url=(0102)interv.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>ΤΡΥΠΕΣ - Συνεντεύξεις</title>
+<script language="JavaScript">
+
+<!-- Beginning of JavaScript Applet -------------------
+
+/* Copyright (C)1996 Web Integration Systems, Inc. DBA Websys, Inc.
+   All Rights Reserved.   This applet can be re-used or modified, if credit is given in 
+   the source code. We will not be held responsible for any unwanted effects due to the 
+   usage of this applet or any derivative.  No warrantees for usability for any specific 
+   application are given or implied. Chris Skinner, January 30th, 1996.
+   Hacked for CNNfn by RD, Jan. 31, 1996
+   Hacked for InfiNet's WebPaper, Feb. 2th, 1996
+   Hacked for Farallon by fred, Feb. 5th, 1996  
+   Hacked for School by Douglas, Mar. 13th, 1996
+   Hacked for Me by Cyber Virus (me), just before (June 19th, 1996)
+*/
+function scrollit_r2l(seed)
+{
+        var m1  = "Καλωσήρθατε στη σελίδα συνεντεύξεων...   ";
+        var m2  = "Επιλέξτε μία από τις διαθέσιμες συνεντεύξεις κάνοντας κλικ στο όνομα. ";
+        var m3  = "Η βοήθειά σας στην επέκταση της σελίδας αυτής είναι ανεκτίμητη...";
+	var msg=m1+m2+m3;	
+        var out = " ";
+        var c   = 1;
+        if (seed > 100) {
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 100 && seed > 0) {
+                for (c=0 ; c < seed ; c++) {
+                        out+=" ";
+                }
+                out+=msg;
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                    window.status=out;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) {
+                if (-seed < msg.length) {
+                        out+=msg.substring(-seed,msg.length);
+                        seed--;
+                        var cmd="scrollit_r2l(" + seed + ")";
+                        window.status=out;
+                        timerTwo=window.setTimeout(cmd,100);
+                }
+                else {
+                        window.status=" ";
+                        timerTwo=window.setTimeout("scrollit_r2l(100)",75);
+                }
+        }
+}
+// -- End of JavaScript code -------------- -->
+
+</script>
+<script type="text/javascript" src="images/disclaim-element.js"></script><script type="text/javascript" src="images/graph-calc.js"></script><script type="text/javascript" src="images/jquery.min.js"></script><script type="text/javascript">
+//<![CDATA[
+var firstDate = 820454400000;
+var lastDate = 1356998399999;
+var wbPrefix = "http://web.archive.org/web/";
+var wbCurrentUrl = "http:\/\/www.kapatel.gr\/matrix\/users\/panatha\/trypes\/interv.htm";
+
+var curYear = -1;
+var curMonth = -1;
+var yearCount = 18;
+var firstYear = 1996;
+var imgWidth=450;
+var yearImgWidth = 25;
+var monthImgWidth = 2;
+var trackerVal = "none";
+var displayDay = "27";
+var displayMonth = "Dec";
+var displayYear = "2004";
+var prettyMonths = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+function showTrackers(val) {
+	if(val == trackerVal) {
+		return;
+	}
+	if(val == "inline") {
+		document.getElementById("displayYearEl").style.color = "#ec008c";
+		document.getElementById("displayMonthEl").style.color = "#ec008c";
+		document.getElementById("displayDayEl").style.color = "#ec008c";		
+	} else {
+		document.getElementById("displayYearEl").innerHTML = displayYear;
+		document.getElementById("displayYearEl").style.color = "#ff0";
+		document.getElementById("displayMonthEl").innerHTML = displayMonth;
+		document.getElementById("displayMonthEl").style.color = "#ff0";
+		document.getElementById("displayDayEl").innerHTML = displayDay;
+		document.getElementById("displayDayEl").style.color = "#ff0";
+	}
+   document.getElementById("wbMouseTrackYearImg").style.display = val;
+   document.getElementById("wbMouseTrackMonthImg").style.display = val;
+   trackerVal = val;
+}
+function getElementX2(obj) {
+	var thing = jQuery(obj);
+	if((thing == undefined) 
+			|| (typeof thing == "undefined") 
+			|| (typeof thing.offset == "undefined")) {
+		return getElementX(obj);
+	}
+	return Math.round(thing.offset().left);
+}
+function trackMouseMove(event,element) {
+
+   var eventX = getEventX(event);
+   var elementX = getElementX2(element);
+   var xOff = eventX - elementX;
+	if(xOff < 0) {
+		xOff = 0;
+	} else if(xOff > imgWidth) {
+		xOff = imgWidth;
+	}
+   var monthOff = xOff % yearImgWidth;
+
+   var year = Math.floor(xOff / yearImgWidth);
+	var yearStart = year * yearImgWidth;
+   var monthOfYear = Math.floor(monthOff / monthImgWidth);
+   if(monthOfYear > 11) {
+       monthOfYear = 11;
+   }
+   // 1 extra border pixel at the left edge of the year:
+   var month = (year * 12) + monthOfYear;
+   var day = 1;
+	if(monthOff % 2 == 1) {
+		day = 15;
+	}
+	var dateString = 
+		zeroPad(year + firstYear) + 
+		zeroPad(monthOfYear+1,2) +
+		zeroPad(day,2) + "000000";
+
+	var monthString = prettyMonths[monthOfYear];
+	document.getElementById("displayYearEl").innerHTML = year + 1996;
+	document.getElementById("displayMonthEl").innerHTML = monthString;
+	// looks too jarring when it changes..
+	//document.getElementById("displayDayEl").innerHTML = zeroPad(day,2);
+
+	var url = wbPrefix + dateString + '/' +  wbCurrentUrl;
+	document.getElementById('wm-graph-anchor').href = url;
+
+   //document.getElementById("wmtbURL").value="evX("+eventX+") elX("+elementX+") xO("+xOff+") y("+year+") m("+month+") monthOff("+monthOff+") DS("+dateString+") Moy("+monthOfYear+") ms("+monthString+")";
+   if(curYear != year) {
+       var yrOff = year * yearImgWidth;
+       document.getElementById("wbMouseTrackYearImg").style.left = yrOff + "px";
+       curYear = year;
+   }
+   if(curMonth != month) {
+       var mtOff = year + (month * monthImgWidth) + 1;
+       document.getElementById("wbMouseTrackMonthImg").style.left = mtOff + "px";
+       curMonth = month;
+   }
+}
+//]]>
+</script><style type="text/css">body{margin-top:0!important;padding-top:0!important;min-width:800px!important;}#wm-ipp a:hover{text-decoration:underline!important;}</style></head>
+
+
+<body background="images/backgrd1.gif" bgcolor="#000000" text="#FFFFFF" link="#00FF00" vlink="#00FF00" alink="#FF0000" onload="timerONE=window.setTimeout(&#39;scrollit_r2l(100)&#39;,500);">
+<basefont size="3">
+
+<table width="100%" border="0">
+<tbody><tr><td><img src="images/interv.gif" hspace="10"></td>
+<td valign="middle"><font size="4"></font><center><font size="4"><strong>Σ Υ Ν Ε Ν Τ Ε Υ Ξ Ε Ι Σ</strong></font><br>
+Στη σελίδα αυτή θα παρουσιάζονται συνεντεύξεις, αφιερώματα ή ρεπορτάζ που έχουν δημοσιευτεί σε εφημερίδες
+ή περιοδικά και έχουν σχέση με το συγκρότημα. Όπως όμως είναι φυσικό, είναι αδύνατο να φτάνει στα χέρια μου
+κάθε συνέντευξη που έχει σχέση με τις Τρύπες οπότε η συνισφορά σας στην επέκταση της σελίδας αυτής είναι
+ευπρόσδεκτη και απαραίτητη.</center></td></tr>
+</tbody></table><br><br><ul>
+<table>
+<tbody><tr><td valign="top"><a href="interv1.htm"><img src="images/news.gif" hspace="5" border="0"></a></td>
+<td><a href="interv1.htm">Αφιέρωμα</a> στον Γιάννη Αγγελάκα (ΜΕΤΡΟ 3/96)</td></tr>
+<tr><td valign="top"><a href="undercon.htm"><img src="images/news.gif" hspace="5" border="0"></a></td>
+<td><a href="undercon.htm">Συνέντευξη</a> του Γιάννη Αγγελάκα (ΜΕΤΡΟ 4/96)</td></tr>
+<tr><td valign="top"><a href="interv3.htm"><img src="images/news.gif" hspace="5" border="0"></a></td>
+<td><a href="interv3.htm">Συνέντευξη</a> του Γ. Αγγελάκα (Ελευθεροτυπία 21/4/96)</td></tr>
+<tr><td valign="top"><a href="interv4.htm"><img src="images/news.gif" hspace="5" border="0"></a></td>
+<td><a href="interv4.htm">Ρεπορτάζ</a> από τη συναυλία των Τρυπών στο ΡΟΔΟΝ LIVE (Ελευθεροτυπία 29/4/96)</td></tr>
+</tbody></table><br><br></ul>
+<table><tbody><tr>
+<td valign="top"><img src="images/info.gif" hspace="7"></td>
+<td><b>Σ Η Μ Ε Ι Ω Σ Η</b><br>
+Ολες οι συνεντεύξεις γράφτηκαν όπως ακριβώς έχουν δημοσιευτεί. Ολα τα λάθη σε στίχους, τραγούδια ή οποιεσδήποτε
+ανακριβής πληροφορίες οφείλονται στον εκάστοτε συντάκτη που αναγράφεται στην αρχή κάθε συνεντεύξεως. Τέλος
+συγχωρήστε μας για τα τυχόν ορθογραφικά λάθη που δεν έπεσαν στην αντίληψή μας.</td>
+</tr></tbody></table><br>
+<hr><table>
+<tbody><tr><td><a href="main.htm"><img src="images/home.gif" border="0" hspace="5"></a></td>
+<td><a href="main.htm">Επιστροφή</a> στα περιεχόμενα</td></tr>
+</tbody></table>
+<hr>
+<font size="2"><center>Copyright © 1996 <a href="mailto:panatha@beryl.kapatel.gr">Χατζηκοκολάκης Κώστας</a>
+και Τσίχλης Λάμπρος</center></font>
+
+
+
+
+
+
+
+
+</body></html>

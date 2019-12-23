@@ -1,0 +1,169 @@
+
+<!-- saved from url=(0103)gallery.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>ΤΡΥΠΕΣ - Gallery</title>
+<script language="JavaScript">
+
+<!-- Beginning of JavaScript Applet -------------------
+
+/* Copyright (C)1996 Web Integration Systems, Inc. DBA Websys, Inc.
+   All Rights Reserved.   This applet can be re-used or modified, if credit is given in 
+   the source code. We will not be held responsible for any unwanted effects due to the 
+   usage of this applet or any derivative.  No warrantees for usability for any specific 
+   application are given or implied. Chris Skinner, January 30th, 1996.
+   Hacked for CNNfn by RD, Jan. 31, 1996
+   Hacked for InfiNet's WebPaper, Feb. 2th, 1996
+   Hacked for Farallon by fred, Feb. 5th, 1996  
+   Hacked for School by Douglas, Mar. 13th, 1996
+   Hacked for Me by Cyber Virus (me), just before (June 19th, 1996)
+*/
+function scrollit_r2l(seed)
+{
+        var m1  = "Καλωσήρθατε στην πινακοθήκη των Τρυπών...   ";
+        var m2  = "Διαλέξτε την εικόνα ή το αρχείο ήχου που θέλετε κάνοντας κλικ στο όνομα. ";
+        var m3  = "Σημειώστε ότι τα αρχεία ήχου τα 'κατεβάζετε' μέσω ftp.";
+	var msg=m1+m2+m3;
+        var out = " ";
+        var c   = 1;
+        if (seed > 100) {
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 100 && seed > 0) {
+                for (c=0 ; c < seed ; c++) {
+                        out+=" ";
+                }
+                out+=msg;
+                seed--;
+                var cmd="scrollit_r2l(" + seed + ")";
+                    window.status=out;
+                timerTwo=window.setTimeout(cmd,100);
+        }
+        else if (seed <= 0) {
+                if (-seed < msg.length) {
+                        out+=msg.substring(-seed,msg.length);
+                        seed--;
+                        var cmd="scrollit_r2l(" + seed + ")";
+                        window.status=out;
+                        timerTwo=window.setTimeout(cmd,100);
+                }
+                else {
+                        window.status=" ";
+                        timerTwo=window.setTimeout("scrollit_r2l(100)",75);
+                }
+        }
+}
+// -- End of JavaScript code -------------- -->
+
+</script>
+</head>
+<body background="images/backgrd1.gif" text="#FFFFFF" link="#00FF00" vlink="#00FF00" alink="#FF0000" onload="timerONE=window.setTimeout(&#39;scrollit_r2l(100)&#39;,500);">
+
+
+<table cellspacing="20"><tbody><tr><td valign="top"><img src="images/gallery.gif"></td>
+<td><font size="5"><i><b>Gallery</b></i></font><br>
+Καλωσήρθατε στην "πινακοθήκη" των Τρυπών. Στη σελίδα αυτή θα βρείτε διάφορες εικόνες αλλά και ηχητικά
+αποσπάσματα που αφορούν το συγκρότημα καθώς και Links προς σελίδες με τέτοιο υλικό. Εαν διαθέτετε ή
+γνωρίζετε και εσείς μια τέτοια σελίδα επικοινωνήστε μαζί μου για να την προσθέσω στη σελίδα αυτή. Πρέπει να
+σημειωθεί ότι η σελίδα αυτή είναι ακόμα σε αρχικό στάδιο και σιγά σιγά και με τη δική σας βοήθεια θα αναπτύσεται.
+</td></tr></tbody></table><ul><br>
+<table>
+<tbody><tr><td><img src="images/photos.gif"></td><td colspan="4"><b>Φωτογραφίες / Εικόνες</b></td></tr>
+<tr><td></td><td colspan="2"><i>Του Συγκροτήματος</i></td>
+<td colspan="2"><i>Απο Δίσκους</i></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/photo1.gif">Τρύπες (1)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="images/album1.jpg">Τρύπες (Εξώφ.)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/photo2.gif">Τρύπες (2)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="images/album2.jpg">Πάρτυ στο 13ο Οροφο (Εξώφ.)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/agelak.gif">Γ. Αγγελάκας (1)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="images/album3.jpg">Τρύπες στον Παράδεισο (Εξώφ.)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/agelak2.gif">Γ. Αγγελάκας (2)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="images/album4.jpg">9 Πληρωμένα Τραγούδια (Εξώφ.)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/karras.gif">Γ. Καρράς (1)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="images/photo3.gif">9 Πληρωμένα Τραγούδια (Οπισθ.)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/karras2.gif">Γ. Καρράς (2)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="images/album5.jpg">Κράτα το Σώου Μαιμού (Εξώφ.)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/tolios.gif">Γ. Τόλιος (1)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="images/album6.jpg">Υπέροχο Τίποτα (Εξώφ.)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/tolios2.gif">Γ. Τόλιος (2)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="images/album7.jpg">Κεφάλι Γεμάτο Χρυσάφι (Εξώφ.)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/papadop.gif">Μ. Παπαδόπουλος (1)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/papadop2.gif">Μ. Παπαδόπουλος (2)</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="images/zabetas.gif">Α. Ζαμπέττας</a></td></tr>
+<tr><td colspan="5"><br><br></td></tr>
+<tr><td><img src="images/sounds.gif"></td><td colspan="4"><b>Τραγούδια του Συγκροτήματος (.au)</b></td></tr>
+<tr><td></td><td colspan="2"><i>9 Πληρωμένα Τραγούδια</i></td>
+<td colspan="2"><i>Κράτα το Σώου Μαϊμού (Live)</i></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/den_xwras_pouthena.au">Δεν Χωράς Πουθενά</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/01-edw.ra">Εδώ</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/h_maska_pou_kryveis.ra">Η Μάσκα που Κρύβεις</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/02-paraksenh_polh.ra">Παράξενη Πόλη</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/to_treno.ra">Το Τρένο</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/03-vradynh_planh.ra">Βραδυνή Πλάνη</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/thymamai_ena_spiti.ra">Θυμάμαι ένα Σπίτι</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/04-amnhsia.ra">Αμνησία</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/oles_oi_apanthseis.ra">Ολες οι Απαντήσεις</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/05-prwth_fora.ra">Πρώτη Φορά</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/apo_mia_adeia_kardia.ra">Από μια Αδεια Καρδιά</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/06-asfaleia.ra">Ασφάλεια</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/la_la_la_la.ra">Λα Λα Λα Λα</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/08-party_sto_13o_orofo.ra">Πάρτυ στο 13ο Οροφο</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/ena_plhrwmeno_tragoudi.ra">Ενα Πληρωμένο Τραγούδι</a><img src="images/space.gif"></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/09-h_dikia_sou_kontinh_amerikh.ra">Η Δικιά σου Κοντινή Αμερική</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/tsifteteli.ra">Τσιφτετέλι</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/10-xwris_emena.ra">Χωρίς Εμένα</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/ennia_plhrwmena_tragoudia/amnhsia.ra">Αμνησία (ακουστικό)</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/11-taksidiara_psyxh.ra">Ταξιδιάρα Ψυχή</a></td></tr>
+<tr><td></td><td></td><td></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/12-erwtevmenoi_sxizofreneis.ra">Ερωτευμένοι Σχιζοφρενείς</a></td></tr>
+<tr><td></td><td colspan="2"><i>Διάφορα</i></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/13-dws_mou_ligh_akoma_agaph.ra">Δωσ' μου Λίγη Ακόμα Αγάπη</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/other/party_sto_13o_orofo.ra">Πάρτυ στο 13ο Οροφο</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/14-ekth_avgoustou.ra">Εκτη Αυγούστου</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/other/axarh_mera.ra">Αχαρη Μέρα</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/15-ta_kanonika_paidia.ra">Τα Κανονικά Παιδιά</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/other/xoros_twn_deilwn.ra">Ο Χορός των Δειλών</a></td>
+<td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/krata_to_swou_maimou/16-thlimenoi_sth_giorth_mas.ra">Θλιμμένοι Στη Γιορτή Μας</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/other/edw.ra">Εδώ</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/other/ston_paradeiso.ra">Στον Παράδεισο</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/pub/audio/trypes/other/krata_to_swou_maimou.ra">Κράτα το Σώου Μαϊμού</a></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td><td><a href="ftp://155.198.135.42/file:///pub/audio/trypes/other/ta_kanonika_paidia.ra">Τα Κανονικά Παιδιά</a></td></tr>
+</tbody></table><br><br>
+<table>
+<tbody><tr><td><img src="images/links.gif"></td><td colspan="2"><b>Links</b></td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td>
+<td><a href="http://www.edu.uch.gr/Docs/songs/ROCK/Artists/Trypes/trypes.gr.html">Rock - Trypes</a></td></tr>
+<tr><td></td><td></td><td>
+Η σελίδα αυτή είναι μια αξιόλογη σελίδα για τις Τρύπες. Στην σελίδα αυτή μπορείτε να βρείτε τους στίχους
+για τα τραγούδια των τεσσάρων πρώτων δίσκων, φωτογραφίες απο τα εξώφυλλα καθώς και αρχεία ήχου
+με μερικά από τα τραγούδια των δίσκων αυτών. Η σελίδα αυτή υπάρχει επίσης και σε
+<a href="http://www.edu.uch.gr/Docs/songs/ROCK/Artists/Trypes/trypes.eng.html">αγγλική έκδοση</a>.
+</td></tr>
+<tr><td></td><td><img src="images/ball1.gif"></td>
+<td><a href="http://soaserver.tuc.uc.edu/org/UCHellas/music_gr.html">Greek Music</a></td></tr>
+<tr><td></td><td></td><td>
+Η σελίδα αυτή δεν αναφέρεται αποκλειστικά στις Τρύπες αλλά στο Ελληνικό τραγούδι. Στη σελίδα αυτή
+μπορείτε να βρείτε αρχεία ήχου (wav, mid, mod ή Real Audio) με πολλά γνωστά ελληνικά τραγούδια, μεταξύ
+αυτών και τραγούδια των Τρυπών. Πρέπει να σημειωθεί οτί μερικά από τα τραγούδια δεν διατείθονται On-Line
+αλλά μέσω e-mail κατόπιν παραγγελίας.
+</td></tr>
+
+</tbody></table><br><br></ul><hr>
+<table>
+<tbody><tr><td><a href="main.htm"><img src="images/home.gif" border="0" hspace="5"></a></td>
+<td><a href="main.htm">Επιστροφή</a> στα περιεχόμενα</td></tr>
+</tbody></table>
+<hr><font size="2">
+<center>Copyright © 1998 <a href="mailto:panatha@beryl.kapatel.gr">Χατζηκοκολάκης Κώστας</a>
+και <a href="mailto://bg@kav.forthnet.gr">Μπαϊρακτάρης Γιώργος</a></center></font>
+
+
+
+
+
+
+
+
+
+</body></html>

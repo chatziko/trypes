@@ -1,0 +1,134 @@
+
+<!-- saved from url=(0092) -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>The TRYPES Home Page</title>
+<script language="JavaScript">
+
+<!-- Helpers for JSI page...
+
+// Navigation - Start
+
+function gettheDate() {
+
+	Todays = new Date();
+
+	TheDate = "" + Todays.getDate() + " / " + (Todays.getMonth()+ 1) +" / " + 
+
+        "19"+Todays.getYear() 
+
+	// document.clock.thedate.value = TheDate;
+
+	}
+
+// Navigation - Stop
+
+// Netscapes Clock - Start
+
+// this code was taken from Netscapes JavaScript documentation at
+
+// www.netscape.com on Jan.25.96
+
+
+
+var timerID = null;
+
+var timerRunning = false;
+
+function stopclock (){
+
+	if(timerRunning)
+
+		clearTimeout(timerID);
+
+	timerRunning = false;
+
+}
+
+
+
+function startclock () {
+
+	// Make sure the clock is stopped
+
+	stopclock();
+
+	gettheDate()
+
+	showtime();
+
+}
+
+
+
+function showtime () {
+
+	var now = new Date();
+
+	var hours = now.getHours();
+
+	var minutes = now.getMinutes();
+
+	var seconds = now.getSeconds()
+
+	var timeValue = "" + ((hours >12) ? hours -12 :hours)
+
+	timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+
+	timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+
+	timeValue += (hours >= 12) ? " μ.μ." : " π.μ."
+
+        // Add this for on HTML clock, not status bar 
+
+        // document.clock.face.value = timeValue;
+
+	// you could replace the above with this
+
+	// and have a clock on the status bar:
+
+	window.status = "Ωρα:  "+timeValue+"         "+"Ημερομηνία:  "+TheDate;
+
+	timerID = setTimeout("showtime()",1000);
+
+	timerRunning = true;
+
+}
+
+// Netscapes Clock - Stop
+
+
+
+// end Helpers -->
+
+</script>
+
+</head>
+<body bgcolor="#000000" text="#FFFFFF" link="#00FF00" vlink="#00FF00" alink="#FF0000" onload="startclock()">
+
+
+<center><img src="images/logo.gif" alt="Logo"></center>
+<br><center>Welcome to TRYPES Home Page. In this page you can find some interesting information about this famous
+rock band including diskography, lyrics, news, announcements etc. All pages except this one are written in Greek
+language so if your browser cannot display Greek characters select "Download Greek Fonts" and follow the
+instructions. After this you will be able to read Greek characters. To enter the Trypes main page click the
+"continue" button below.</center><br>
+<center><a href="main.htm"><img src="images/continue.gif" alt="Continue" border="0"></a></center><br>
+<center><a href="http://home.netscape.com/"><img src="images/netscape.gif" border="0"></a></center>
+<br><hr>
+<table cellspaceing="5">
+<tbody><tr><td><a href="mailto:panatha@beryl.kapatel.gr"><img src="images/mail.gif" border="0" hspace="7"></a></td>
+<td><em>For any comments or suggestions, mail me at "<a href="mailto:panatha@beryl.kapatel.gr">panatha@beryl.kapatel.gr</a>"</em></td></tr>
+<tr><td><a href="fonts.htm"><img src="images/fonts.gif" border="0" hspace="7"></a></td>
+<td><em><a href="fonts.htm">Download</a> Greek fonts</em></td></tr>
+</tbody></table>
+<hr><font size="2">
+<center>Copyright © 1996 by <a href="mailto:panatha@beryl.kapatel.gr">Hatzikokolakis Kostas</a>
+and Tsichlis Labros.</center></font>
+
+
+
+
+
+
+
+
+</body></html>
