@@ -34,5 +34,5 @@ www.kapatel.gr/matrix/users/panatha/trypes/main.htm   (δεν λειτουργε
 
 ___
 
-[**Είσοδος**](https://chatziko.github.io/trypes/) (συνιστάται η χρήση Netscape Navigator 2.0, φυσικά!)
+[**Είσοδος**](https://www.chatzi.org/trypes/) (συνιστάται η χρήση Netscape Navigator 2.0, φυσικά!)
 
